@@ -1,3 +1,4 @@
+#include "Archivo.h"
 #include "Cliente.h"
 #include <iostream>
 using namespace std;
@@ -9,6 +10,7 @@ Cliente::Cliente(){
     tipo = "";
     anioCliente = 0;
     estado = "";
+    ArchivoClientes.setNombreArchivo("ArchivoClientes.txt");
 }
 
 void Cliente::setNumCliente(string _numCliente){
@@ -66,7 +68,12 @@ void Cliente::realizarExtraccion(int monto, int dia, int mes, int anio) {
     transacciones.extraccion(monto, dia, mes, anio);
 }
 
-string Cliente::obtenerInfo() {
-    return numeroCliente + "; " + nombre + "; " + apellido +"; " + "; " + tipo + "; " + to_string(anioCliente) + "; " + estado;
+void Cliente::listaClientes() {
+    ArchivoClientes.leerTodo("ArchivoClientes.txt");
 }
+
+void Cliente::transaccionesCliente(string NumCliente){
+    transacciones.listaTransacciones(NumCliente);
+}
+
 

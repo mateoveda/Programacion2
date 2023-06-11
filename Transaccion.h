@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Archivo.h"
 using namespace std;
 
+class Archivo;
 class Transaccion{
 protected:
     int numTrans;
@@ -17,6 +17,7 @@ public:
     Transaccion();
     void extraccion (int, int, int, int);
     void deposito (int, int, int, int);
+    void listaTransacciones(string);
 
     void setNumTrans(int);
     void setMonto(int);

@@ -1,4 +1,4 @@
-#include <iostream>
+#include "Archivo.h"
 #include <random>
 #include <ctime>
 #include "Transaccion.h"
@@ -38,6 +38,10 @@ void Transaccion::extraccion(int _monto, int _dia, int _mes, int _anioTrans) {
     ArchivoTransacciones.guardar("ArchivoTransacciones.txt",text);
 }
 
+void Transaccion::listaTransacciones(string parametro) {
+    ArchivoTransacciones.listaEspecifica(parametro);
+}
+
 void Transaccion::setNumTrans(int _numTrans) {
     numTrans = _numTrans;
 }
@@ -75,3 +79,4 @@ int Transaccion::getAnioTrans() {
 char Transaccion::getTipoTrans() {
     return tipoTrans;
 }
+

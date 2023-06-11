@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
-#include <vector>
 #include "Tarjeta.h"
 #include "Transaccion.h"
 using namespace std;
 
+class Archivo;
 class Cliente{
 private:
     Transaccion transacciones;
@@ -36,6 +36,7 @@ public:
     void cambiarEstado(string);
     void realizarExtraccion(int, int, int, int);
     void realizarDeposito(int, int, int, int);
-    string obtenerInfo();
+    void listaClientes();
+    void transaccionesCliente(string);
 
 };

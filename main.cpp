@@ -51,6 +51,7 @@ int main() {
                             cout << "Se ha registrado exitosamente el cliente num. " << numCliente << ": " << nombre
                                  << " " << apellido << endl;
                             clientes.registrar();
+                            opTipo = '4';
                             break;
 
                         case '2':
@@ -58,6 +59,7 @@ int main() {
                             cout << "Se ha registrado exitosamente el cliente num. " << numCliente << ": " << nombre
                                  << " " << apellido << endl;
                             clientes.registrar();
+                            opTipo = '4';
                             break;
 
                         case '3':
@@ -69,15 +71,15 @@ int main() {
                                 cout << "Se ha registrado exitosamente el cliente num. " << numCliente << ": " << nombre
                                      << " " << apellido << endl;
                                 clientes.registrar();
+                                opTipo = '4';
                             }
                             break;
                         case '4':
                             cout << "" << endl;
                             break;
                         default:
-                            cout
-                                    << "La opcion ingresada es incorrecta, por favor, lea con más detenimiento nuestras opciones e ingrese una opción valida"
-                                    << endl;
+                            cout << "La opcion ingresada es incorrecta, por favor" << endl;
+                            cout << "lea con más detenimiento nuestras opciones e ingrese una opción valida" << endl;
                     }
                 } while (opTipo != '4');
                 break;
@@ -158,12 +160,37 @@ int main() {
                     cout << "" << endl;
                     switch (opVarias) {
                         case '1':
+                            cout << "Ingrese el numero de cliente" << endl;
+                            cin >> numCliente;
+                            clientes.transaccionesCliente(numCliente);
                             break;
                         case '2':
+                            cout << "Lista de clientes: " << endl;
+                            clientes.listaClientes();
                             break;
                         case '3':
+                            cout << "Ingrese el numero de cliente" << endl;
+                            cin >> numCliente;
+                            clientes.transaccionesCliente(numCliente);
                             break;
                         case '4':
+                            do {
+                                cout << "Como desea su informe?" << endl;
+                                cout << "1. Por semestre" << endl;
+                                cout << "2. Por anio" << endl;
+                                cout << "3. Volver" << endl;
+                                cin >> opTiempo;
+/*
+                                if (clientes.empty()) {
+                                    cout << "No hay clientes registrados aun" << endl;
+                                } else {
+                                    for (int i = 0; i < clientes.size(); i++) {
+                                        cout << "Ingrese su fecha de referencia (maxima):" << endl;
+                                        //get from Transacciones.txt
+                                    }
+                                }
+                                */
+                            } while (opTiempo != 3);
                             break;
                         case '5':
                             break;
@@ -180,7 +207,7 @@ int main() {
                 cout << "La opción ingresada es incorrecta, por favor, verifique estar colocando una opcion legitima" << endl;
                 break;
         }
-    }while(option!=6);
+    }while(option != '6');
     cout << "Muchas gracias, por usar nuestro sistema de gestion VRP" << endl;
 }
 /*

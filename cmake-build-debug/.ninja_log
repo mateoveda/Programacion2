@@ -1,3 +1,21 @@
 # ninja log v5
 12	2595	7081501981972664	CMakeFiles/Programacion2.dir/main.cpp.obj	8d924df3d2485d87
 2596	3327	7081501989171707	Programacion2.exe	f5a849f1ea1599ff
+20	2624	7082111273612251	CMakeFiles/Programacion2.dir/main.cpp.obj	8d924df3d2485d87
+159	4053	7082111287928811	CMakeFiles/Programacion2.dir/Cliente.cpp.obj	99bd969c9060bbf9
+314	5463	7082111302022982	CMakeFiles/Programacion2.dir/Archivo.cpp.obj	235f90f19242dc3c
+4054	7105	7082111318423804	CMakeFiles/Programacion2.dir/Transaccion.cpp.obj	cf48ca5d9d59e6e0
+2626	8161	7082111328882823	CMakeFiles/Programacion2.dir/Tarjeta.cpp.obj	4c08e3b655bbb40b
+8161	8797	7082111335276246	Programacion2.exe	c3e6bad414e71693
+7	2435	7082114827690117	CMakeFiles/Programacion2.dir/main.cpp.obj	8d924df3d2485d87
+2436	2949	7082114832765006	Programacion2.exe	c3e6bad414e71693
+123	3748	7082120448724842	CMakeFiles/Programacion2.dir/Archivo.cpp.obj	235f90f19242dc3c
+8	2415	7082121112410246	CMakeFiles/Programacion2.dir/main.cpp.obj	8d924df3d2485d87
+2415	2972	7082121117883019	Programacion2.exe	c3e6bad414e71693
+11	2592	7082129784857431	CMakeFiles/Programacion2.dir/main.cpp.obj	8d924df3d2485d87
+366	3831	7082129797248397	CMakeFiles/Programacion2.dir/Transaccion.cpp.obj	cf48ca5d9d59e6e0
+147	4692	7082129805869328	CMakeFiles/Programacion2.dir/Cliente.cpp.obj	99bd969c9060bbf9
+4692	5073	7082129809625244	Programacion2.exe	c3e6bad414e71693
+5	1805	7082140961429010	CMakeFiles/Programacion2.dir/main.cpp.obj	8d924df3d2485d87
+335	3440	7082142961344474	CMakeFiles/Programacion2.dir/Transaccion.cpp.obj	cf48ca5d9d59e6e0
+111	4264	7082142969598948	CMakeFiles/Programacion2.dir/Cliente.cpp.obj	99bd969c9060bbf9
