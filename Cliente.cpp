@@ -54,6 +54,9 @@ void Cliente::registrar(){
     ArchivoClientes.guardar("ArchivoClientes.txt",variable);
 }
 
+void Cliente::cambiarEstado(string buscar) {
+    ArchivoClientes.modificarLinea("ArchivoClientes.txt",numeroCliente,buscar,estado);
+}
 
 void Cliente::realizarDeposito(int monto, int dia, int mes, int anio) {
     transacciones.deposito(monto, dia, mes, anio);
@@ -66,3 +69,4 @@ void Cliente::realizarExtraccion(int monto, int dia, int mes, int anio) {
 string Cliente::obtenerInfo() {
     return numeroCliente + "; " + nombre + "; " + apellido +"; " + "; " + tipo + "; " + to_string(anioCliente) + "; " + estado;
 }
+

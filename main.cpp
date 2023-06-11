@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     Cliente clientes;
-    char option, opVarias, opTiempo, opTipo;
+    char option, opVarias, opTiempo, opTipo, opEstado;
     int anioCliente, _dia, _mes, _anio, _monto;
     string numCliente, nombre, apellido, tipo, estado, informeClientes, informeTransacciones;
     do {
@@ -68,10 +68,9 @@ int main() {
                                 clientes.registrar();
                             }
                             break;
-
                         case '4':
+                            cout << "" << endl;
                             break;
-
                         default:
                             cout << "La opcion ingresada es incorrecta, por favor, lea con más detenimiento nuestras opciones e ingrese una opción valida" << endl;
                     } break;
@@ -79,24 +78,35 @@ int main() {
 
                 break;
             case '2': //alta-baja
-                if (clientes.empty()){
-                    cout << "No hay clientes registrados aun" << endl;
-                } else {
-                    cout << "Ingrese el numero del cliente: "<<endl;
-                    cin >> numCliente;
-                    for (int i=0; i<clientes.size(); i++){
-                        if (clientes[i].getNumeroCliente() == numCliente){
-                            if(clientes[i].getEstado().compare("ALTA")==0){
-                                clientes[i].setEstado("BAJA");
-                            } else if(clientes[i].getEstado().compare("BAJA")==0){
-                                clientes[i].setEstado("ALTA");
-                            }
-                            cout<<"Al cliente "<<clientes[i].getNombre()<<" "<<clientes[i].getApellido()<<"se le ha dado de "<<clientes[i].getEstado()<<endl;
-                        }
+                cout << "Ingrese el numero del cliente: "<<endl;
+                cin >> numCliente;
+                clientes.setNumCliente(numCliente);
+                do {
+                    cout << "Seleccione el nuevo estado del cliente" << endl;
+                    cout << "1. ALTA" << endl;
+                    cout << "2. BAJA" << endl;
+                    cout << "3. Salir" << endl;
+                    cout << "" << endl;
+                    cin >> opTipo;
+                    switch (opTipo) {
+                        case '1':
+                            clientes.setEstado("ALTA");
+                            clientes.cambiarEstado("BAJA");
+                            cout << "Se ha cambiado correctamente el estado del cliente N:"<< numCliente << endl;
+                            break;
+                        case '2':
+                            clientes.setEstado("BAJA");
+                            clientes.cambiarEstado("ALTA");
+                            cout << "Se ha cambiado correctamente el estado del cliente N:"<< numCliente << endl;
+                            break;
+                        case '3':
+                            cout << "" << endl;
+                            break;
+                        default:
+                            cout << "La opcion ingresada no es correcta, por favor seleccione una opcion valida:" << endl;
                     }
-                }
-                break;
             case '3': //extraccion
+
                 if(clientes.empty()){
                     cout << "No hay clientes registrados aun" << endl;
                 } else {
