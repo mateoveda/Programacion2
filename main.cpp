@@ -1,4 +1,3 @@
-//hola
 #include <iostream>
 using namespace std;
 
