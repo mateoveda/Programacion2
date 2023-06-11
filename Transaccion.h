@@ -3,13 +3,14 @@
 using namespace std;
 
 class Transaccion{
-private:
+protected:
     int numTrans;
     int monto;
     int dia;
     int mes;
     int anioTrans;
     char tipoTrans;
+    string text;
     Archivo ArchivoTransacciones;
 
 public:
