@@ -1,14 +1,21 @@
-//
-// Created by Mateo on 10/6/2023.
-//
+#include <iostream>
+#include <string>
+using namespace std;
 
-#ifndef PROGRAMACION2_TARJETA_H
-#define PROGRAMACION2_TARJETA_H
+class Tarjeta{
+private:
+    int limite;
+    string tipo_t;
 
+public:
+    Tarjeta();
 
-class Tarjeta {
+    void tarjeta_oro();
+    void tarjeta_black();
 
+    void setLimite(int);
+    void setTipoT(string);
+
+    int getLimite();
+    string getTipoT();
 };
-
-
-#endif //PROGRAMACION2_TARJETA_H

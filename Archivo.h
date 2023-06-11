@@ -1,14 +1,22 @@
-//
-// Created by Mateo on 10/6/2023.
-//
+#include <fstream>
+#include <iostream>
+#include <string>
+using namespace std;
 
-#ifndef PROGRAMACION2_ARCHIVO_H
-#define PROGRAMACION2_ARCHIVO_H
-
-
-class Archivo {
-
+class Archivo{
+protected:
+    string texto;
+    string nombreArchivo;
+    string linea;
+public:
+    Archivo();
+    string getNombreArchivo();
+    string getTexto();
+    void setNombreArchivo(string);
+    void setlinea(string);
+    void guardar(string, string);
+    void leerTodo(string);
+    void modificarLinea(string, string, string, string);
+    void listaFecha(int,int,int);
+    void listaEspecifica(string);
 };
-
-
-#endif //PROGRAMACION2_ARCHIVO_H

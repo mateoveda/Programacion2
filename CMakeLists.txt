@@ -4,4 +4,4 @@ project(Programacion2)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Programacion2
-        main.cpp)
+        main.cpp Archivo.cpp Cliente.cpp Transaccion.cpp Tarjeta.cpp)

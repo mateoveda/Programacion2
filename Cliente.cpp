@@ -1,5 +1,68 @@
-//
-// Created by Mateo on 10/6/2023.
-//
-
 #include "Cliente.h"
+#include <iostream>
+using namespace std;
+
+Cliente::Cliente(){
+    numeroCliente = "";
+    nombre = "";
+    apellido = "";
+    tipo = "";
+    anioCliente = 0;
+    estado = "";
+}
+
+void Cliente::setNumCliente(string _numCliente){
+    numeroCliente = _numCliente;
+}
+void Cliente::setNombre(string _nombre){
+    nombre = _nombre;
+}
+void Cliente::setApellido(string _apellido){
+    apellido = _apellido;
+}
+void Cliente::setTipo(string _tipo){
+    tipo = _tipo;
+}
+void Cliente::setAnio(int _anio){
+    anioCliente = _anio;
+}
+void Cliente::setEstado(string _estado){
+    estado = _estado;
+}
+
+string Cliente::getNumeroCliente(){
+    return numeroCliente;
+}
+string Cliente::getNombre(){
+    return nombre;
+}
+string Cliente::getApellido(){
+    return apellido;
+}
+string Cliente::getTipo(){
+    return tipo;
+}
+int Cliente::getAnioCliente(){
+    return anioCliente;
+}
+string Cliente::getEstado(){
+    return estado;
+}
+
+void Cliente::registrar(){
+    string variable = numeroCliente + "-" + nombre + "-" + apellido + "-" + tipo + "-" + to_string(anioCliente) + "-ALTA";
+    ArchivoClientes.guardar("ArchivoClientes.txt",variable);
+}
+
+
+void Cliente::realizarDeposito(int monto, int dia, int mes, int anio) {
+    transacciones.deposito(monto, dia, mes, anio);
+}
+
+void Cliente::realizarExtraccion(int monto, int dia, int mes, int anio) {
+    transacciones.extraccion(monto, dia, mes, anio);
+}
+
+string Cliente::obtenerInfo() {
+    return numeroCliente + "; " + nombre + "; " + apellido +"; " + "; " + tipo + "; " + to_string(anioCliente) + "; " + estado;
+}
