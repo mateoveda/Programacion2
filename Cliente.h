@@ -4,7 +4,6 @@
 #include "Transaccion.h"
 using namespace std;
 
-class Archivo;
 class Cliente{
 private:
     Transaccion transacciones;

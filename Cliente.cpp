@@ -1,4 +1,3 @@
-#include "Archivo.h"
 #include "Cliente.h"
 #include <iostream>
 using namespace std;
@@ -10,7 +9,9 @@ Cliente::Cliente(){
     tipo = "";
     anioCliente = 0;
     estado = "";
+    ArchivoClientes.setlinea("");
     ArchivoClientes.setNombreArchivo("ArchivoClientes.txt");
+    ArchivoClientes.settexto("");
 }
 
 void Cliente::setNumCliente(string _numCliente){
@@ -53,11 +54,11 @@ string Cliente::getEstado(){
 
 void Cliente::registrar(){
     string variable = numeroCliente + "-" + nombre + "-" + apellido + "-" + tipo + "-" + to_string(anioCliente) + "-ALTA";
-    ArchivoClientes.guardar("ArchivoClientes.txt",variable);
+    ArchivoClientes.guardar(ArchivoClientes.getNombreArchivo(),variable);
 }
 
 void Cliente::cambiarEstado(string buscar) {
-    ArchivoClientes.modificarLinea("ArchivoClientes.txt",numeroCliente,buscar,estado);
+    ArchivoClientes.modificarLinea(ArchivoClientes.getNombreArchivo(),numeroCliente,buscar,estado);
 }
 
 void Cliente::realizarDeposito(int monto, int dia, int mes, int anio) {

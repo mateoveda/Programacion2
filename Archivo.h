@@ -14,6 +14,7 @@ public:
     string getTexto();
     void setNombreArchivo(string);
     void setlinea(string);
+    void settexto(string);
     void guardar(string, string);
     void leerTodo(string);
     void modificarLinea(string, string, string, string);

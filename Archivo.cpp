@@ -24,6 +24,10 @@ void Archivo::setlinea(string Linea) {
     linea = Linea;
 }
 
+void Archivo::settexto(string Texto){
+    texto = Texto;
+}
+
 void Archivo::guardar(string NombreArchivo, string Texto) {
     ofstream archivo(NombreArchivo);
     archivo << Texto << endl;

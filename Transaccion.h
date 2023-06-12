@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Archivo.h"
 using namespace std;
 
 class Archivo;

@@ -1,4 +1,3 @@
-#include "Archivo.h"
 #include <random>
 #include <ctime>
 #include "Transaccion.h"
@@ -12,6 +11,9 @@ Transaccion::Transaccion() {
     anioTrans = 0;
     tipoTrans = '\0';
     text = "";
+    ArchivoTransacciones.setNombreArchivo("ArchivoTransacciones.txt");
+    ArchivoTransacciones.setlinea("");
+    ArchivoTransacciones.settexto("");
 }
 
 void Transaccion::deposito(int _monto, int _dia, int _mes, int _anioTrans) {
