@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include "Archivo.h"
 using namespace std;
