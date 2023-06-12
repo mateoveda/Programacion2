@@ -1,7 +1,10 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include "Tarjeta.h"
 #include "Transaccion.h"
+#include "Archivo.h"
 using namespace std;
 
 class Cliente{
