@@ -18,8 +18,8 @@ protected:
 
 public:
     Transaccion();
-    void extraccion (int, int, int, int);
-    void deposito (int, int, int, int);
+    void extraccion (string, int, int, int, int);
+    void deposito (string, int, int, int, int);
     void listaTransacciones(string);
 
     void setNumTrans(int);
