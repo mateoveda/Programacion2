@@ -105,12 +105,14 @@ int main() {
                             clientes.cambiarEstado("BAJA");
                             cout << "Se ha cambiado correctamente el estado del cliente N:" << numCliente << endl;
                             cout << "" << endl;
+                            opEstado = '3';
                             break;
                         case '2':
                             clientes.setEstado("BAJA");
                             clientes.cambiarEstado("ALTA");
                             cout << "Se ha cambiado correctamente el estado del cliente N:" << numCliente << endl;
                             cout << "" << endl;
+                            opEstado = '3';
                             break;
                         case '3':
                             cout << "" << endl;
@@ -223,101 +225,3 @@ int main() {
     }while(option != '6');
     cout << "Muchas gracias, por usar nuestro sistema de gestion VRP" << endl;
 }
-/*
-                do {
-                    cout << "* * * CONSULTAS VARIAS * * *" << endl;
-                    cout << "1. Cliente por numero" << endl;
-                    cout << "2. Todos los Clientes" << endl;
-                    cout << "3. Transacciones por Cliente" << endl;
-                    cout << "4. Transacciones por periodo de tiempo" << endl;
-                    cout << "5. Volver " << endl;
-                    cout << "Ingrese una opcion: " << endl;
-                    cin >> opVarias;
-                    cout << "" << endl;
-                    switch (opVarias) {
-                        case '1': //cliente por numero
-                            if (clientes.empty()) {
-                                cout << "No hay clientes registrados aun" << endl;
-                            } else {
-                                cout << "Ingrese el numero del cliente que busca: " << endl;
-                                cin >> numCliente;
-                                for (int i = 0; i < clientes.size(); i++) {
-                                    if (clientes[i].getNumeroCliente().compare(numCliente)) {
-                                        cout << "Nombre: " << clientes[i].getNombre() << endl;
-                                        cout << "Apellido: " << clientes[i].getApellido() << endl;
-                                        cout << "Numero de cliente: " << clientes[i].getNumeroCliente() << endl;
-                                        cout << "Tipo de contrato: " << clientes[i].getTipo() << endl;
-                                        cout << "Anio de suscripcion: " << clientes[i].getAnioCliente() << endl;
-                                        cout << "Estado actual: " << clientes[i].getEstado() << endl;
-                                        if (clientes[i].getTipo().compare("Plata")) {
-                                            cout << "Tarjeta: No (Plata)" << endl;
-                                        } else {
-                                            cout << "Tarjeta: Si" << endl;
-                                            cout << "Tipo: " << clientes[i].tarjetas.getTipoT() << endl;
-                                            cout << "Limite: " << clientes[i].tarjetas.getLimite() << endl;
-                                        }
-                                    }
-                                }
-                            }
-                            break;
-                        case '2': //lista clientes
-                            if (clientes.empty()) {
-                                cout << "No hay clientes registrados aun" << endl;
-                            } else {
-                                for (int i = 0; i < clientes.size(); i++) {
-                                    cout << clientes[i].getNombre() << " " << clientes[i].getApellido()
-                                         << "; Num. " << clientes[i].getNumeroCliente() << "; Tipo: "
-                                         << clientes[i].getTipo() << endl;
-                                }
-                            }
-                            break;
-                        case '3': //transacciones por cliente
-                            if (clientes.empty()) {
-                                cout << "No hay clientes registrados aun" << endl;
-                            } else {
-                                for (int i = 0; i < clientes.size(); i++) {
-                                    //get from Transacciones.txt
-                                }
-                            }
-                            break;
-                        case '4':
-                            do {
-                                cout << "Como desea su informe?" << endl;
-                                cout << "1. Por semestre" << endl;
-                                cout << "2. Por anio" << endl;
-                                cout << "3. Volver" << endl;
-                                cin >> opTiempo;
-
-                                if (clientes.empty()) {
-                                    cout << "No hay clientes registrados aun" << endl;
-                                } else {
-                                    for (int i = 0; i < clientes.size(); i++) {
-                                        cout << "Ingrese su fecha de referencia (maxima):" << endl;
-                                        //get from Transacciones.txt
-                                    }
-                                }
-                            } while (opTiempo != 3);
-                            break;
-                        default:
-                            cout << "Opcion invalida" << endl;
-                    }
-                } while (opVarias != 5);
-            break;
-            default:
-                cout << "Opcion invalida" << endl;
-        }
-}
-while (option != '6');
-
-for (int i = 0; i < clientes.size(); i++) {
-    cout << clientes[i].getNombre() << endl;
-    cout << clientes[i].getApellido() << endl;
-    cout << clientes[i].getNumeroCliente() << endl;
-    cout << clientes[i].getTipo() << endl;
-    cout << clientes[i].getAnioCliente() << endl;
-    cout << clientes[i].getEstado() << endl;
-    cout << clientes[i].tarjetas.getTipoT() << endl;
-}
-
-return 0;
-                 */
