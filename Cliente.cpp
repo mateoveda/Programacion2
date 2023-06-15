@@ -61,12 +61,12 @@ void Cliente::cambiarEstado(string buscar) {
     ArchivoClientes.modificarLinea(ArchivoClientes.getNombreArchivo(),numeroCliente,buscar,estado);
 }
 
-void Cliente::realizarDeposito(int monto, int dia, int mes, int anio) {
-    transacciones.deposito(monto, dia, mes, anio);
+void Cliente::realizarDeposito(string Numero, int monto, int dia, int mes, int anio) {
+    transacciones.deposito(Numero, monto, dia, mes, anio);
 }
 
-void Cliente::realizarExtraccion(int monto, int dia, int mes, int anio) {
-    transacciones.extraccion(monto, dia, mes, anio);
+void Cliente::realizarExtraccion(string Numero, int monto, int dia, int mes, int anio) {
+    transacciones.extraccion(Numero, monto, dia, mes, anio);
 }
 
 void Cliente::listaClientes() {
@@ -76,5 +76,3 @@ void Cliente::listaClientes() {
 void Cliente::transaccionesCliente(string NumCliente){
     transacciones.listaTransacciones(NumCliente);
 }
-
-
