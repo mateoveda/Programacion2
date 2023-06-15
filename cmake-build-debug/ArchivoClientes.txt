@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 45-Agus-Perez-black-2020-ALTA
+=======
+00001-Rosa-Biscoglio-black-2008-ALTA
+00002-Pedro-Sosa-oro-2009-ALTA
+00003-Lucas-Copas-black-2010-BAJA
+00004-Soledad-Lisambia-plata-2011-ALTA
+>>>>>>> 24fe5eeba58b236beb42f4c4843ca311a9bae5df
