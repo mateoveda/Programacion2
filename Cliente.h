@@ -36,8 +36,8 @@ public:
     string getEstado();
     void registrar();
     void cambiarEstado(string);
-    void realizarExtraccion(int, int, int, int);
-    void realizarDeposito(int, int, int, int);
+    void realizarExtraccion(string, int, int, int, int);
+    void realizarDeposito(string, int, int, int, int);
     void listaClientes();
     void transaccionesCliente(string);
 

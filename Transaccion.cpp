@@ -16,7 +16,7 @@ Transaccion::Transaccion() {
     ArchivoTransacciones.settexto("");
 }
 
-void Transaccion::deposito(int _monto, int _dia, int _mes, int _anioTrans) {
+void Transaccion::deposito(string numerito, int _monto, int _dia, int _mes, int _anioTrans) {
     monto = _monto;
     dia = _dia;
     mes = _mes;
@@ -24,11 +24,11 @@ void Transaccion::deposito(int _monto, int _dia, int _mes, int _anioTrans) {
     tipoTrans = 'D';
     srand(static_cast<unsigned>(std::time(nullptr)));
     numTrans = rand() % 900 + 100;
-    text = to_string(numTrans) + "-" + to_string(monto) + "-" + to_string(dia) + "-" + to_string(mes) + "-" + to_string(anioTrans) + "-" + tipoTrans;
+    text = numerito + "-" + to_string(numTrans) + "-" + to_string(monto) + "-" + to_string(dia) + "-" + to_string(mes) + "-" + to_string(anioTrans) + "-" + tipoTrans;
     ArchivoTransacciones.guardar("ArchivoTransacciones.txt",text);
 }
 
-void Transaccion::extraccion(int _monto, int _dia, int _mes, int _anioTrans) {
+void Transaccion::extraccion(string numerito, int _monto, int _dia, int _mes, int _anioTrans) {
     monto = _monto;
     dia = _dia;
     mes = _mes;
@@ -36,7 +36,7 @@ void Transaccion::extraccion(int _monto, int _dia, int _mes, int _anioTrans) {
     tipoTrans = 'E';
     srand(static_cast<unsigned>(std::time(nullptr)));
     numTrans = rand() % 900 + 100;
-    text = to_string(numTrans) + "-" + to_string(monto) + "-" + to_string(dia) + "-" + to_string(mes) + "-" + to_string(anioTrans) + "-" + tipoTrans;
+    text = numerito + "-" + to_string(numTrans) + "-" + to_string(monto) + "-" + to_string(dia) + "-" + to_string(mes) + "-" + to_string(anioTrans) + "-" + tipoTrans;
     ArchivoTransacciones.guardar("ArchivoTransacciones.txt",text);
 }
 

@@ -73,13 +73,13 @@ void Archivo::listaFecha(int, int, int) {
 void Archivo::listaEspecifica(string CodigoCliente) {
     texto = "";
     linea = "";
-    nombreArchivo = "ArchivoClientes.txt";
+    nombreArchivo = "ArchivoTransacciones.txt";
     ifstream archivo(nombreArchivo);
     while(getline(archivo,linea)){
         if(linea.find(CodigoCliente) != string::npos){
-            getline(archivo,linea);
             texto = texto + linea + "\n";
         }
     }
     cout << texto << "\n";
+    archivo.close();
 }

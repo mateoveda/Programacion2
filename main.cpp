@@ -134,7 +134,7 @@ int main() {
                 cin >> _mes;
                 cout << "ingrese el anio: " << endl;
                 cin >> _anio;
-                clientes.realizarExtraccion(_monto, _dia, _mes, _anio);
+                clientes.realizarExtraccion(numCliente, _monto, _dia, _mes, _anio);
                 cout << "Se realizó la extracción correctamente" << endl;
                 cout << "" << endl;
                 break;
@@ -150,7 +150,7 @@ int main() {
                 cin >> _mes;
                 cout << "ingrese el anio: " << endl;
                 cin >> _anio;
-                clientes.realizarDeposito(_monto, _dia, _mes, _anio);
+                clientes.realizarDeposito(numCliente, _monto, _dia, _mes, _anio);
                 cout << "Se realizó la extracción correctamente" << endl;
                 cout << "" << endl;
                 break;
