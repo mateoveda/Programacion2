@@ -81,4 +81,3 @@ int Transaccion::getAnioTrans() {
 char Transaccion::getTipoTrans() {
     return tipoTrans;
 }
-

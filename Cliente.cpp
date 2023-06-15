@@ -77,4 +77,3 @@ void Cliente::transaccionesCliente(string NumCliente){
     transacciones.listaTransacciones(NumCliente);
 }
 
-
