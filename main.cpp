@@ -50,6 +50,7 @@ int main() {
                             clientes.setTipo("plata");
                             cout << "Se ha registrado exitosamente el cliente num. " << numCliente << ": " << nombre
                                  << " " << apellido << endl;
+                            cout << "" << endl;
                             clientes.registrar();
                             opTipo = '4';
                             break;
@@ -58,6 +59,7 @@ int main() {
                             clientes.setTipo("oro");
                             cout << "Se ha registrado exitosamente el cliente num. " << numCliente << ": " << nombre
                                  << " " << apellido << endl;
+                            cout << "" << endl;
                             clientes.registrar();
                             opTipo = '4';
                             break;
@@ -72,6 +74,7 @@ int main() {
                                      << " " << apellido << endl;
                                 clientes.registrar();
                                 opTipo = '4';
+                                cout << "" << endl;
                             }
                             break;
                         case '4':
@@ -80,6 +83,7 @@ int main() {
                         default:
                             cout << "La opcion ingresada es incorrecta, por favor" << endl;
                             cout << "lea con más detenimiento nuestras opciones e ingrese una opción valida" << endl;
+                            cout << "" << endl;
                     }
                 } while (opTipo != '4');
                 break;
@@ -100,11 +104,13 @@ int main() {
                             clientes.setEstado("ALTA");
                             clientes.cambiarEstado("BAJA");
                             cout << "Se ha cambiado correctamente el estado del cliente N:" << numCliente << endl;
+                            cout << "" << endl;
                             break;
                         case '2':
                             clientes.setEstado("BAJA");
                             clientes.cambiarEstado("ALTA");
                             cout << "Se ha cambiado correctamente el estado del cliente N:" << numCliente << endl;
+                            cout << "" << endl;
                             break;
                         case '3':
                             cout << "" << endl;
@@ -130,6 +136,7 @@ int main() {
                 cin >> _anio;
                 clientes.realizarExtraccion(_monto, _dia, _mes, _anio);
                 cout << "Se realizó la extracción correctamente" << endl;
+                cout << "" << endl;
                 break;
 
             case '4': //deposito
@@ -145,6 +152,7 @@ int main() {
                 cin >> _anio;
                 clientes.realizarDeposito(_monto, _dia, _mes, _anio);
                 cout << "Se realizó la extracción correctamente" << endl;
+                cout << "" << endl;
                 break;
 
             case '5':
@@ -157,20 +165,22 @@ int main() {
                     cout << "5. Volver " << endl;
                     cout << "Ingrese una opcion: " << endl;
                     cin >> opVarias;
-                    cout << "" << endl;
                     switch (opVarias) {
                         case '1':
                             cout << "Ingrese el numero de cliente" << endl;
                             cin >> numCliente;
+                            cout << "" << endl;
                             clientes.transaccionesCliente(numCliente);
                             break;
                         case '2':
                             cout << "Lista de clientes: " << endl;
                             clientes.listaClientes();
+                            cout << "" << endl;
                             break;
                         case '3':
                             cout << "Ingrese el numero de cliente" << endl;
                             cin >> numCliente;
+                            cout << "" << endl;
                             clientes.transaccionesCliente(numCliente);
                             break;
                         case '4':
@@ -180,6 +190,7 @@ int main() {
                                 cout << "2. Por anio" << endl;
                                 cout << "3. Volver" << endl;
                                 cin >> opTiempo;
+                                cout << "" << endl;
 /*
                                 if (clientes.empty()) {
                                     cout << "No hay clientes registrados aun" << endl;
@@ -196,6 +207,7 @@ int main() {
                             break;
                         default:
                             cout << "La opcion ingresada es incorrecta, por favor, revise nuevamente nuestras opciones" << endl;
+                            cout << "" << endl;
                     }
                 }while(opVarias != '5');
                 break;
@@ -205,6 +217,7 @@ int main() {
 
             default:
                 cout << "La opción ingresada es incorrecta, por favor, verifique estar colocando una opcion legitima" << endl;
+                cout << "" << endl;
                 break;
         }
     }while(option != '6');

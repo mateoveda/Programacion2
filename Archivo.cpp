@@ -29,8 +29,16 @@ void Archivo::settexto(string Texto){
 }
 
 void Archivo::guardar(string NombreArchivo, string Texto) {
+    texto = "";
+    linea = "";
+    ifstream archivoSalida(NombreArchivo);
+    while(getline(archivoSalida,linea)){
+        texto = texto + linea + "\n";
+    }
+    texto = texto + Texto;
+    archivoSalida.close();
     ofstream archivo(NombreArchivo);
-    archivo << Texto << endl;
+    archivo << texto << endl;
     archivo.close();
 }
 
